@@ -5,13 +5,42 @@ import { Label } from "@/components/ui/label";
 import { Input } from "@/components/ui/input";
 import Link from "next/link";
 import { Button } from "@/components/ui/button";
-
+import axios from "axios";
+import { useRouter } from "next/navigation";
 
 export default function Login() {
   const [authState, setAuthState] = useState<AuthStateType>({
+    name : "",
     email: "",
     password: "",
   });
+  const [loading, setloading] = useState<boolean>(false);
+  const router = useRouter()
+  const [errors , setErrors] = useState<AuthErrorType>({});
+
+  const submitData = ( event : React.FormEvent) => {
+    event.preventDefault()
+    setloading(true)
+    axios.post(`${process.env.NEXT_PUBLIC_BASE_URL}/api/auth/signup`, authState)
+    .then( (res) => {
+      setloading(false)
+
+      const response= res.data;
+      if(response.status == 200) {
+        router.push(`/login?message=${response.message}`)
+      } 
+      else if(response.status == 400) {
+        setErrors(response.errors)
+      }
+
+    })
+    .catch( (err) => {
+      setloading(false)
+      console.log(err)
+    })
+
+
+  }
 
 
 
@@ -24,7 +53,7 @@ export default function Login() {
           <div className="flex justify-center">
             <Image src="/images/logo.svg" width={50} height={50} alt="Logo" />
           </div>
-          <form >
+          <form  >
             <div className="mt-5">
               <div className="flex justify-between items-center">
                 <div>
@@ -41,10 +70,10 @@ export default function Login() {
                   id="name"
                   placeholder="John Wick"
                   onChange={(event) =>
-                    setAuthState({ ...authState, email: event.target.value })
+                    setAuthState({ ...authState, name: event.target.value })
                   }
                 />
-                {/* <span className="text-red-400 font-bold">{errors?.email}</span> */}
+                <span className="text-red-400 font-bold">{errors?.name}</span>
               </div>
 
               <div className="mt-5">
@@ -57,7 +86,7 @@ export default function Login() {
                     setAuthState({ ...authState, email: event.target.value })
                   }
                 />
-                {/* <span className="text-red-400 font-bold">{errors?.email}</span> */}
+                <span className="text-red-400 font-bold">{errors?.email}</span>
               </div>
 
 
@@ -67,14 +96,16 @@ export default function Login() {
                   type="password"
                   id="password"
                   placeholder="Password.."
-                  
+                  onChange={(event) =>
+                    setAuthState({ ...authState, password: event.target.value })
+                  }
                 />
-                <span className="text-red-400 font-bold">
-                  {/* {errors?.password} */}
-                </span>
+                <span className="text-red-400 font-bold">{errors?.password}</span>
               </div>
               <div className="mt-5">
-                <Button className="w-full">login</Button>
+                <Button className="w-full"  disabled={loading} onClick={submitData} >
+                  { loading ? "loading..." : "Sign up"}
+                </Button>
               </div>
               <div className="mt-5">
                 <span>Have an account already? </span>

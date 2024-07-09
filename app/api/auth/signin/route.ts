@@ -41,7 +41,7 @@ export async function POST(req: NextRequest) {
         return NextResponse.json({
             status: 400,
             error: {
-                email: "Invalid Credentials",
+                Password: "Password Incorrcet!",
             },
         });
     } catch (error) {
