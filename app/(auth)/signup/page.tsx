@@ -75,11 +75,11 @@ export default function Register() {
                 />
               </div>
               <div className="mt-5">
-                <Button className="w-full"> Submit</Button>
+                <Button className="w-full"> Sign up</Button>
               </div>
               <div className="mt-5">
                 <span>Already Have an account ? </span>
-                <Link href="/login" className="text-orange-300 font-bold">
+                <Link href="/signin" className="text-orange-300 font-bold">
                   Login
                 </Link>
               </div>
