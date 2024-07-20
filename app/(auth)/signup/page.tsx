@@ -12,9 +12,9 @@ import logo from "@/public/logo.png"
 export default function Register() {
   const router = useRouter();
   return (
-    <div className="bg-background pt-10 pb-10">
-      <div className=" h-screen w-screen flex justify-center items-center">
-        <div className="w-full lg:w-1/3 bg-muted p-6 rounded-lg">
+    <div className="bg-background md:py-10">
+      <div className="h-screen md:w-screen flex justify-center items-center">
+        <div className="w-4/5 lg:w-1/3 bg-muted p-6 rounded-lg">
           <div className="flex justify-center">
             <Image src={logo} width={200} height={200} alt="Logo" />
           </div>
@@ -32,8 +32,7 @@ export default function Register() {
                 <Input
                   type="text"
                   id="name"
-                  placeholder="Type your name.."
-                />
+                  placeholder="Type your name.."/>
               </div>
               <div className="mt-5">
                 <Label htmlFor="username">Username</Label>

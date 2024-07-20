@@ -14,7 +14,7 @@ export default function signin () {
   return (
     <div className="bg-background pt-10 pb-10">
       <div className=" h-screen w-screen flex justify-center items-center">
-        <div className="w-full lg:w-1/3 bg-muted p-6 rounded-lg">
+        <div className="mg:w-full w-4/5 lg:w-1/3 bg-muted p-6 rounded-lg">
           <div className="flex justify-center">
             <Image src={logo} width={200} height={200} alt="Logo" />
           </div>
@@ -22,7 +22,7 @@ export default function signin () {
             <div className="mt-5">
               <div className="flex justify-between items-center">
                 <div>
-                  <h1 className="text-2xl font-bold">Sign up</h1>
+                  <h1 className="text-2xl font-bold">Sign in</h1>
                   <p>Welcome back to the Commune.</p>
                 </div>
               </div>
