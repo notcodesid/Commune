@@ -1,5 +1,8 @@
-import { ClerkProvider } from "@clerk/nextjs";
 import { Inter } from "next/font/google";
+import {
+    ClerkProvider,
+  } from '@clerk/nextjs'
+  
 
 export const metadata = {
     title: "Commune",
@@ -15,11 +18,11 @@ export const metadata = {
 }) {
     return (
         <ClerkProvider>
-        <html lang="en">
-            <body className={`${inter.className}`}  >
-                {children}
-            </body>
-        </html>
-        </ClerkProvider>
+      <html lang="en">
+        <body className={inter.className}>
+          {children}
+        </body>
+      </html>
+    </ClerkProvider>
     )
   }
