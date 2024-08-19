@@ -13,15 +13,7 @@ const DotIcon = () => {
 export default function Home() {
   return (
     <header>
-      <UserButton>
-        <UserButton.MenuItems>
-          <UserButton.Action
-            label="Open chat"
-            labelIcon={<DotIcon />}
-            onClick={() => alert('init chat')}
-          />
-        </UserButton.MenuItems>
-      </UserButton>
+      
     </header>
   )
 }

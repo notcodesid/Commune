@@ -2,6 +2,9 @@ import { Inter } from "next/font/google";
 import {
     ClerkProvider,
   } from '@clerk/nextjs'
+import "../globals.css";
+import Header from "../components/header";
+  
   
 
 export const metadata = {
@@ -19,7 +22,8 @@ export const metadata = {
     return (
         <ClerkProvider>
       <html lang="en">
-        <body className={inter.className}>
+        <body className={inter.className}> 
+          <Header />
           {children}
         </body>
       </html>
