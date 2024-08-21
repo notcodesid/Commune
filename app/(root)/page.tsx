@@ -1,5 +1,3 @@
-import { Button } from "@/components/ui/button";
-import { Avatar, AvatarImage, AvatarFallback } from "@radix-ui/react-avatar";
 import { Leftside } from "../components/leftside";
 import { MainFeed } from "../components/mainfeed";
 import { Stories } from "../components/stories";

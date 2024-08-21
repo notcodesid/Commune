@@ -1,34 +1,29 @@
+import type { Metadata } from "next";
 import { Inter } from "next/font/google";
-import {
-    ClerkProvider,
-  } from '@clerk/nextjs'
 import "../globals.css";
-import Header from "../components/header";
-import { NavItem } from "../components/navitem";
-  
-  
+import { ClerkProvider } from "@clerk/nextjs";
+import Navbar from "../components/navbar";
 
-export const metadata = {
-    title: "Commune",
-    description: "Social media for the user who use Github",
-  };
-  
-  const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ["latin"] });
 
-  export default function RootLayout({
-    children
-} : { 
-    children : React.ReactNode
-}) {
-    return (
+export const metadata: Metadata = {
+  title: "Commune",
+  description: "Social media for the user who use Github",
+};
+
+export default function RootLayout({
+  children,
+}: Readonly<{
+  children: React.ReactNode;
+}>) {
+  return (
+    <html lang="en">
+      <body className={inter.className}>
         <ClerkProvider>
-      <html lang="en">
-        <body className={inter.className}> 
-          <Header />
-          {children}
-          <NavItem />
-        </body>
-      </html>
-    </ClerkProvider>
-    )
-  }
+          <Navbar />
+        {children}
+        </ClerkProvider>
+       </body>
+    </html>
+  );
+}
