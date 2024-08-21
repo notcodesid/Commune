@@ -26,7 +26,7 @@ const friendRequests: FriendRequestData[] = [
 
 export function FriendRequest() {
   return (
-    <Card>
+    <Card className="bg-white border-none rounded-xl">
       <CardHeader>
         <CardTitle>Friend Requests</CardTitle>
       </CardHeader>

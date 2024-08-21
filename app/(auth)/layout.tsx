@@ -4,6 +4,7 @@ import {
   } from '@clerk/nextjs'
 import "../globals.css";
 import Header from "../components/header";
+import { NavItem } from "../components/navitem";
   
   
 
@@ -25,6 +26,7 @@ export const metadata = {
         <body className={inter.className}> 
           <Header />
           {children}
+          <NavItem />
         </body>
       </html>
     </ClerkProvider>

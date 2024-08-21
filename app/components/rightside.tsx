@@ -3,7 +3,7 @@ import { SuggestedFriend } from "./suggestedFriend";
 
 export function RightSide() {
     return (
-        <aside className="w-full bg-white p-4 hidden lg:block">
+        <aside className="w-full  p-4 hidden lg:block">
             <div>
         <FriendRequest />
             </div>

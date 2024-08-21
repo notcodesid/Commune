@@ -9,8 +9,8 @@ import { RightSide } from "../components/rightside";
 export default function Home() {
   return (
     <div className="flex gap-6">
-      <div className="hidden xl:block w-[20%]"> <Leftside /> </div>
-      <div className="w-full lg:w-[70%] xl:w-[50%]">
+      <div className="hidden xl:block w-[23%]"> <Leftside /> </div>
+      <div className="w-full lg:w-[70%] xl:w-[45%]">
         <div>
           <Stories />
           <Addpost />

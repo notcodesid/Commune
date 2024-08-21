@@ -5,7 +5,7 @@ import { BellIcon, HomeIcon, MessageSquareIcon, UserIcon } from "lucide-react";
 
 export function Leftside() {
     return (
-<Card className="mt-5 ml-3 w-full max-w-md bg-white shadow-md overflow-hidden">
+<Card className="mt-5 ml-3 w-full max-w-md bg-white shadow-md overflow-hidden rounded-xl">
       <div className="relative">
         <img 
           src="https://images.pexels.com/photos/546819/pexels-photo-546819.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" 
@@ -22,6 +22,8 @@ export function Leftside() {
           <h2 className="text-xl font-semibold">Robert Fox</h2>
           <p className="text-sm text-gray-500">Software Engineer</p>
         </div>
+
+{/* nav item */}
         <nav>
           <ul className="space-y-2">
             <li>
@@ -49,6 +51,10 @@ export function Leftside() {
               </a>
             </li>
           </ul>
+        </nav>
+
+        <nav>
+            
         </nav>
       </CardContent>
     </Card>

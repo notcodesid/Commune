@@ -15,7 +15,7 @@ interface PostCardProps {
 
 export function PostCard({ name, jobTitle, timeAgo, content, imageUrl }: PostCardProps) {
     return (
-      <Card className="mt-5 md:px-0 bg-white shadow-sm mb-4">
+      <Card className="mt-5 md:px-0 bg-white shadow-sm mb-4 rounded-xl">
         <CardContent className="p-4">
           <div className="flex items-start justify-between mb-4">
             <div className="flex items-center space-x-4">

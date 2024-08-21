@@ -7,7 +7,7 @@ import { ImageIcon } from "lucide-react";
 export function Addpost() {
     return (
         <>
-    <Card className=" mt-5 mx-3 md:mx-0 bg-white shadow-sm">
+    <Card className=" mt-5 mx-3 md:mx-0 bg-white shadow-sm rounded-xl">
       <CardContent className="p-4">
         <div className="flex items-start space-x-4">
           <Avatar className="w-10 h-10">

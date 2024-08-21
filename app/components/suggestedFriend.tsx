@@ -5,7 +5,7 @@ import { PlusIcon } from "lucide-react";
 
 export function SuggestedFriend() {
     return (
-        <Card>
+        <Card className="bg-white border-none rounded-xl">
         <CardHeader>
           <CardTitle>Suggested Friends</CardTitle>
         </CardHeader>
