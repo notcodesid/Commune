@@ -1,8 +1,8 @@
-import { Leftside } from "../components/leftside";
-import { MainFeed } from "../components/mainfeed";
-import { Stories } from "../components/stories";
-import { Addpost } from "../components/Addpost";
-import { RightSide } from "../components/rightside";
+import { Leftside } from "../components/leftItem/leftside";
+import { MainFeed } from "../components/Feed/mainfeed";
+import { Stories } from "../components/Feed/stories";
+import { Addpost } from "../components/Feed/Addpost";
+import { RightSide } from "../components/rightItem/rightside";
 
 export default function Home() {
   return (

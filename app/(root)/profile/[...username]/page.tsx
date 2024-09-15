@@ -1,7 +1,7 @@
-import { Leftside } from "@/app/components/leftside";
-import { MainFeed } from "@/app/components/mainfeed";
-import ProfileHeader from "@/app/components/profileHeader";
-import { SuggestedFriend } from "@/app/components/suggestedFriend";
+import { Leftside } from "@/app/components/leftItem/leftside";
+import { MainFeed } from "@/app/components/Feed/mainfeed";
+import ProfileHeader from "@/app/components/profiIe/profileHeader";
+import { SuggestedFriend } from "@/app/components/rightItem/suggestedFriend";
 
 export default function Profile() {
     return (
