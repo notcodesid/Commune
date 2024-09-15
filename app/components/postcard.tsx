@@ -3,6 +3,7 @@ import { Avatar, AvatarImage, AvatarFallback } from "@/components/ui/avatar"
 import { Button } from "@/components/ui/button"
 import { Input } from "@/components/ui/input"
 import { MessageSquare, ThumbsUp } from "lucide-react"
+import Comment from "./comments"
 
 interface PostCardProps {
   name: string;
@@ -55,6 +56,9 @@ export function PostCard({ name, jobTitle, timeAgo, content, imageUrl }: PostCar
             placeholder="Share your thoughts here..."
           />
         </div>
+        <Comment username={"Anything"} avatarSrc={""} timestamp={""} content={"This is lol"} likes={6} />
+        <Comment username={"Steve"} avatarSrc={""} timestamp={""} content={"I am steve sgwegwg"} likes={6} />
+        <Comment username={"Tony"} avatarSrc={""} timestamp={""} content={"I am steve sgwegwg"} likes={6} />
       </Card>
     )
   }
